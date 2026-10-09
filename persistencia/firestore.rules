@@ -1,0 +1,26 @@
+// Fase 7 — Reglas de Firestore de EJEMPLO para el cascarón. NO PROBADAS contra el
+// emulador (no hay acceso desde el entorno de construcción): verificalas con el
+// Emulator Suite o el simulador de reglas de la consola antes de publicarlas.
+//
+// Modelo de seguridad deliberadamente débil (doc técnico Fase 7, sección 3): el
+// código de partida funciona como contraseña débil. Estas reglas sólo acotan el
+// daño posible: sesión (anónima) requerida, id con formato de código de partida,
+// y campos limitados a la whitelist de EstadoCompleto.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /partidas/{codigo} {
+      allow read: if request.auth != null
+                  && codigo.matches('[2-9A-HJKMNP-Z]{6}');
+      allow create, update: if request.auth != null
+                  && codigo.matches('[2-9A-HJKMNP-Z]{6}')
+                  && request.resource.data.codigoPartida == codigo
+                  && request.resource.data.keys().hasOnly([
+                       'versionEsquema', 'codigoPartida', 'ultimaModificacion',
+                       'jugador', 'npcs', 'escenas', 'eventos', 'sucesos',
+                       'estadoMundo', 'estadoInternoNPCs', 'estadoInternoSucesos'
+                     ]);
+      allow delete: if false;
+    }
+  }
+}
