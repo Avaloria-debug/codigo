@@ -1,0 +1,20 @@
+[
+  {
+    "id": "evento_incendio_001",
+    "tipo": "incendio",
+    "escenaId": "escena_herreria",
+    "duracion": 5,
+    "condicionExpiracion": null,
+    "activo": true,
+    "metadata": { "intensidad": "media" }
+  },
+  {
+    "id": "evento_disputa_publica_001",
+    "tipo": "disputa_publica",
+    "escenaId": "escena_plaza",
+    "duracion": null,
+    "condicionExpiracion": "mediador_interviene",
+    "activo": true,
+    "metadata": { "motivo": "deuda_impaga" }
+  }
+]

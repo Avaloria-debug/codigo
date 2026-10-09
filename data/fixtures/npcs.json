@@ -1,0 +1,60 @@
+[
+  {
+    "id": "npc_herrero_001",
+    "nombre": "Genérico el Herrero",
+    "arquetipo": "comerciante",
+    "personalidadBase": "Hosco al principio, directo, desconfía de forasteros hasta ganarse su confianza.",
+    "estadoEmocional": "neutral",
+    "relacion": {
+      "valor": 0,
+      "historialRelevante": []
+    },
+    "ubicacionActual": "escena_herreria",
+    "conocimientos": [
+      {
+        "id": "conocimiento_ruta_secreta",
+        "contenido": "Existe un paso oculto detrás de la herrería que evita el peaje de la ciudad.",
+        "nivelAcceso": "requiereRelacion",
+        "umbralRelacion": 40,
+        "eventoDisparadorId": null
+      }
+    ],
+    "activo": true
+  },
+  {
+    "id": "npc_guardia_001",
+    "nombre": "Guardia Genérico",
+    "arquetipo": "guardia",
+    "personalidadBase": "Cumple las reglas al pie de la letra, seco con desconocidos, se relaja si lo ayudan.",
+    "estadoEmocional": "neutral",
+    "relacion": {
+      "valor": 0,
+      "historialRelevante": []
+    },
+    "ubicacionActual": "escena_plaza",
+    "conocimientos": [
+      {
+        "id": "conocimiento_origen_deuda",
+        "contenido": "Sabe quién originó la deuda que desató la disputa en la plaza.",
+        "nivelAcceso": "requiereEvento",
+        "umbralRelacion": null,
+        "eventoDisparadorId": "evento_disputa_publica_001"
+      }
+    ],
+    "activo": true
+  },
+  {
+    "id": "npc_viajero_001",
+    "nombre": "Viajero Genérico",
+    "arquetipo": "viajero",
+    "personalidadBase": "Hablador, cuenta historias de otros lugares, no se queda quieto mucho tiempo.",
+    "estadoEmocional": "neutral",
+    "relacion": {
+      "valor": 0,
+      "historialRelevante": []
+    },
+    "ubicacionActual": "escena_plaza",
+    "conocimientos": [],
+    "activo": true
+  }
+]

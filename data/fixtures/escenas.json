@@ -1,0 +1,40 @@
+[
+  {
+    "id": "escena_plaza",
+    "nombre": "Plaza Central",
+    "descripcionBase": "Un espacio abierto rodeado de puestos de venta, con una fuente seca en el medio.",
+    "salidas": [
+      { "etiqueta": "ir a la herrería", "escenaDestinoId": "escena_herreria" },
+      { "etiqueta": "bajar a la celda", "escenaDestinoId": "escena_celda" }
+    ],
+    "objetosPresentes": ["objeto_fuente_publica"],
+    "npcsPresentes": ["npc_guardia_001", "npc_viajero_001"],
+    "eventosActivos": ["evento_disputa_publica_001"],
+    "estadoCalculado": null,
+    "coberturaDisponible": []
+  },
+  {
+    "id": "escena_herreria",
+    "nombre": "Herrería",
+    "descripcionBase": "Un taller pequeño, con el calor constante de la fragua.",
+    "salidas": [
+      { "etiqueta": "salir a la plaza", "escenaDestinoId": "escena_plaza" }
+    ],
+    "objetosPresentes": ["objeto_espada_rota"],
+    "npcsPresentes": ["npc_herrero_001"],
+    "eventosActivos": ["evento_incendio_001"],
+    "estadoCalculado": null,
+    "coberturaDisponible": ["detrás de la fragua"]
+  },
+  {
+    "id": "escena_celda",
+    "nombre": "Celda",
+    "descripcionBase": "Un espacio angosto de piedra, con una sola puerta reforzada y sin ventanas.",
+    "salidas": [],
+    "objetosPresentes": [],
+    "npcsPresentes": [],
+    "eventosActivos": [],
+    "estadoCalculado": null,
+    "coberturaDisponible": []
+  }
+]

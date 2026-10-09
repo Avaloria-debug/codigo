@@ -1,0 +1,13 @@
+[
+  {
+    "id": "suceso_escasez_001",
+    "tipo": "escasez_alimentos",
+    "alcance": "escena",
+    "escenaId": "escena_plaza",
+    "progreso": 40,
+    "velocidadProgreso": 5,
+    "condicionResolucion": "llega_caravana_comercio",
+    "eventoGeneradoAlResolver": "disputa_publica",
+    "activo": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "id": "jugador_001",
+  "nombre": "Personaje de Prueba",
+  "ubicacionActual": "escena_plaza",
+  "inventario": [
+    { "objetoId": "objeto_antorcha", "cantidad": 1 }
+  ],
+  "atributos": { "salud": 100, "energia": 80 },
+  "flags": { "conocioAlHerrero": true }
+}

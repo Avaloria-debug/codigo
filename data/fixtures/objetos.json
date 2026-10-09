@@ -1,0 +1,20 @@
+[
+  {
+    "id": "objeto_espada_rota",
+    "nombre": "Espada rota",
+    "tipo": "arma",
+    "utilizableComo": []
+  },
+  {
+    "id": "objeto_antorcha",
+    "nombre": "Antorcha",
+    "tipo": "herramienta",
+    "utilizableComo": ["atacar"]
+  },
+  {
+    "id": "objeto_fuente_publica",
+    "nombre": "Fuente pública",
+    "tipo": "objeto_narrativo",
+    "utilizableComo": []
+  }
+]
