@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motor de narración — prueba pre-lore</title>
+<style>
+ body{font-family:system-ui,sans-serif;margin:0;display:flex;flex-wrap:wrap;gap:12px;padding:12px}
+ main{flex:1 1 420px;min-width:300px} aside{flex:1 1 360px;min-width:300px}
+ #log{border:1px solid #888;height:45vh;overflow:auto;padding:8px;white-space:pre-wrap}
+ .npc{color:#06c}.sis{color:#888}.warn{color:#b60}.err{color:#c00}
+ button{margin:2px;padding:6px 10px} fieldset{margin:6px 0} textarea,input,select{max-width:100%}
+ .paso{color:#080}.fallo{color:#c00}.no_se_pudo{color:#b60}
+ pre{max-height:200px;overflow:auto;background:#f4f4f4;padding:6px}
+ #seguridad{background:#fff3cd;padding:6px;border:1px solid #d9a}
+</style></head><body>
+<main>
+ <div id="seguridad">⚠ El código de partida funciona como una contraseña débil: quien lo conozca puede leer/pisar esa partida. No es un modelo de seguridad real.</div>
+ <p id="estado" class="sis"></p><div id="log"></div>
+ <div id="opciones"></div>
+ <div id="textoLibre" hidden><input id="txt" size="40" placeholder="Lo que decís..."><button id="enviar">Enviar</button></div>
+</main>
+<aside><details open><summary><b>Panel de testing</b></summary><div id="panel"></div></details></aside>
+<script type="module" src="./main.js"></script></body></html>
